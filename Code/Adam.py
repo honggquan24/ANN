@@ -108,8 +108,7 @@ class Optimizer_Adam:
             layer.biases_cache = np.zeros_like(layer.biases)
 
             # Update momentum with current gradient
-            layer.weights_momentum = self.beta1 * layer.weights_momentum + (1 -
-            self.beta1) * layer.dweights
+            layer.weights_momentum = self.beta1 * layer.weights_momentum + (1 -  self.beta1) * layer.dweights
             layer.biases_momentum = self.beta1 * layer.biases_momentum + (1 - self.beta1) * layer.dbiases
 
             # Correct the momentum. step must start with 1 here
